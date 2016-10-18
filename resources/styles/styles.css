@@ -1,3 +1,12 @@
 h1 {
-  color: purple;
+  color: blue;
+}
+
+.container {
+  border: 1px solid blue;
+  border-radius: 20px;
+  margin-top: 25px;
+  padding: 10px;
+  width: 50%;
+  background-color: lightyellow;
 }
