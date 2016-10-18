@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component } from '@angular/core'; 
 
 // view
 @Component({
@@ -6,11 +6,17 @@ import { Component } from '@angular/core';
   template: `
   <div class="container">
     <h1>Angular 2 To Do App</h1>
-    <h3 (click)="doStuff(currentTask)" *ngFor="let currentTask of tasks">{{ currentTask.description }}</h3>
+    <h3 (click)="showDetails(currentTask)" *ngFor="let currentTask of tasks">{{ currentTask.description }}</h3>
     <div>
       <h1>Edit Task</h1>
-      <p>Description: {{ selectedTask.description }}</p>
-      <p>Task ID: {{ selectedTask.id }}</p>
+      <div>
+        <label>Enter task description:</label>
+        <input [(ngModel)]="selectedTask.description">
+      </div>
+      <div>
+        <label>Enter task ID:</label>
+        <input [(ngModel)]="selectedTask.id">
+      </div>
     </div>
   </div>
   `
