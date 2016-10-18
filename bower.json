@@ -1,0 +1,22 @@
+{
+  "name": "to do angular2",
+  "description": "to do li",
+  "main": "",
+  "authors": [
+    "zach",
+    "meredith",
+    "and lisa"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.7"
+  }
+}
