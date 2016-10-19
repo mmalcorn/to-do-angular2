@@ -10,7 +10,7 @@ import { Task } from './task.model';
     <option value="notDone" selected="selected">Show Not Done</option>
   </select>
   <div *ngFor="let currentTask of childTaskList | completeness:selectedCompleteness:'Forget':'Me':'Not'">
-    <h3>{{ currentTask.description }}</h3>
+    <task-display [task]="currentTask"></task-display>
     <button (click)="editButtonHasBeenClicked(currentTask)">Edit</button>
   </div>
   `
@@ -24,8 +24,6 @@ export class TaskListComponent {
     this.selectedCompleteness = optionFromMenu;
     console.log(this.selectedCompleteness);
   }
-
-
   editButtonHasBeenClicked(taskToEdit: Task) {
     this.clickSender.emit(taskToEdit);
   }
