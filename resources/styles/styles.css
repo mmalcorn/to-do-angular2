@@ -10,3 +10,8 @@ h1 {
   width: 50%;
   background-color: lightyellow;
 }
+
+.filter {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
