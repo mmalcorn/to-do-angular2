@@ -13,7 +13,7 @@ import { Task } from './task.model';
       <div>
         <label>Enter task ID:</label>
         <input [(ngModel)]="childSelectedTask.id">
-        <button (click)="finishedEditing()">Done</button>
+        <button (click)="doneClicked()">Done</button>
       </div>
     </div>
     `
@@ -21,6 +21,8 @@ import { Task } from './task.model';
 
 export class EditTaskComponent {
   @Input() childSelectedTask: Task;
-
-
+  @Output() doneClickedSender = new EventEmitter();
+  doneClicked() {
+    this.doneClickedSender.emit();
+  }
 }
