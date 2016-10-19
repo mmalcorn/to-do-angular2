@@ -12,7 +12,11 @@ import { Task } from './task.model';
     <div>
       <label>Enter Task ID</label>
       <input #newId>
-      <button (click)="addClicked(newDescription.value, newId.value)">Add</button>
+      <button (click)="
+        addClicked(newDescription.value, newId.value);
+        newDescription.value='';
+        newId.value='';
+      ">Add</button>
     </div>
   `
 })
